@@ -1,0 +1,39 @@
+<div class="book-review-container">
+
+  @if(!showBooks){
+  <div class="info">
+    <p>Име на книгата</p>
+    <p>Описание на книгата</p>
+    <p>Автор на книгата</p>
+    <p>Рейтинг до момента</p>
+  </div>
+
+  <div class="info details">
+    <p>{{ books[index].title || 'No Title'}}</p>
+    <p>{{ books[index].description || 'No Description'}}</p>
+    <p>{{ books[index].author || 'No Author'}}</p>
+    <p>{{ averageRating() }}</p>
+  </div>
+
+  <div>
+    @for (element of [1, 2, 3, 4, 5]; track $index) {
+    <button (click)="rateBook(element)">{{element}}</button>
+    }
+  </div>
+
+  } @else{
+
+  <div class="allBooksRated">
+    @if(!endOfRating){
+    <h3>Вие оценихте всички книги успешно!</h3>
+    <button (click)="restart()">Искам да ги оценя отново</button>
+    <button (click)="successful()">Не, ок съм</button>
+    } @else {
+    <div class="successfulRating">
+      <h3>Благодаря Ви, всички книги са оценени успешно!</h3>
+    </div>
+    }
+  </div>
+  }
+
+</div>

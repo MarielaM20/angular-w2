@@ -1,0 +1,28 @@
+.info {
+    display: inline-block;
+}
+
+.details {
+    margin-left: 50px;
+}
+
+.info p{
+margin-bottom: 18px;
+}
+
+button{
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 8px 15px 8px 15px;
+}
+
+
+.allBooksRated button{
+    display: block;
+    width: 18%;
+    margin-top: 15px;
+}
+
+.successfulRating h3 {
+color: rgb(52, 207, 49);
+}
